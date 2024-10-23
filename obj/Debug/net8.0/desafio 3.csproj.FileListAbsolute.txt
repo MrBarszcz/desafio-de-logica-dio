@@ -12,3 +12,4 @@
 /home/marcos/Downloads/apredizado/dotnet/desafio 3/obj/Debug/net8.0/desafio 3.pdb
 /home/marcos/Downloads/apredizado/dotnet/desafio 3/obj/Debug/net8.0/desafio 3.genruntimeconfig.cache
 /home/marcos/Downloads/apredizado/dotnet/desafio 3/obj/Debug/net8.0/ref/desafio 3.dll
+/home/marcos/Downloads/apredizado/dotnet/desafio 3/obj/Debug/net8.0/desafio 3.sourcelink.json

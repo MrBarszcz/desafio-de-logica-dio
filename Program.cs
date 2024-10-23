@@ -11,6 +11,9 @@ class Program {
 
         // Processamento da entrada
         List<string> departamentos = input.Split(',').ToList();
+
+        // Remover espaços desnecessários de cada departamento
+        List<string> departamentosLimpos = RemoverEspacosDesnecessarios(departamentos);
         
         // Contagem de funcionários por departamento
         Dictionary<string, int> contagemDepartamentos = ContarFuncionariosPorDepartamento(departamentos);
@@ -25,13 +28,19 @@ class Program {
         Console.WriteLine(resultado);
     }
 
-    static string RemoverEspacosDesnecessarios(string input){
-        // Remover espaços no início e no final
-        input = input.Trim();
+    static List<string> RemoverEspacosDesnecessarios(List<string> departamentos) {
+        List<string> resultado = new List<string>();
 
-        // Remover espaços extras entre palavras
-        string[] palavras = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        return string.Join(" ", palavras);
+        foreach (var item in departamentos)
+        {
+            // Remover espaços no início e no final
+            string itemLimpo = item.Trim();
+
+            // Adicionar o item limpo à lista de resultados
+            resultado.Add(itemLimpo);
+        }
+
+        return resultado;
     }
 
 		// Método que conta o número de funcionários em cada departamento.
